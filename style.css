@@ -16,6 +16,7 @@ body {
 }
 
 .anim-box {
+    border-radius: 50%;
     width: 200px;
     height: 200px;
     border: 1px solid white;
@@ -35,7 +36,7 @@ body {
     height: 150%;
     background-image: conic-gradient(
         blue 0deg,
-        transparent 180deg
+        transparent 360deg
     );
     position: absolute;
     left: -25%;
@@ -51,6 +52,7 @@ body {
 
 .anim-box:after {
     content: 'AWESOME';
+    border-radius: 50%;
     width: 94%;
     height: 94%;
     margin: auto;
