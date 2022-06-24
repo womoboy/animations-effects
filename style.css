@@ -1,0 +1,68 @@
+*,
+*:before,
+*:after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(47, 36, 36);
+}
+
+.contaier {
+    width: 100vw;
+    height: 100vh;
+}
+
+.anim-box {
+    width: 200px;
+    height: 200px;
+    border: 1px solid white;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    box-shadow: 3px 5px 35px white;
+    overflow: hidden;
+}
+
+.anim-box:before {
+    content: '';
+    width: 150%;
+    height: 150%;
+    background-image: conic-gradient(
+        blue 0deg,
+        transparent 180deg
+    );
+    position: absolute;
+    left: -25%;
+    top: -25%;
+    animation: rotate 2s infinite linear;
+}
+
+@keyframes rotate {
+    100% {
+        transform: rotate(-360deg);
+    }
+}
+
+.anim-box:after {
+    content: 'AWESOME';
+    width: 94%;
+    height: 94%;
+    margin: auto;
+    position: absolute;
+    background-color: black;
+    color: white;
+    letter-spacing: 5px;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
