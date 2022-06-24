@@ -7,39 +7,45 @@
 }
 
 body {
-    background-color: rgb(42, 28, 28);
+    background-color: rgb(23, 21, 21);
 }
 
 .container {
-    height: 100vh;
     display: flex;
-    align-items: center;
+    flex-direction: column;
     justify-content: center;
-    position: relative;
+    align-items: center;
 }
 
 .heart {
-    width: 100px;
-    height: 100px;
     position: relative;
-    transform: rotate(45deg);
-    background-color: red;
+    width: 100px;
+    height: 90px;
+    margin: 50px auto;
 }
 
 .heart:before,
 .heart:after {
-    content: '';
-    background-color: red;
-    width: 100px;
-    height: 100px;
     position: absolute;
-    border-radius: 50%;
+    content: '';
+    left: 50px;
+    top: 0;
+    width: 50px;
+    height: 80px;
+    background-color: red;
+    border-radius: 50px 50px 0 0;
+    transform: rotate(-45deg);
+    transform-origin: 0 100%;
 }
 
-.heart:before {
-    top: -50px;
+.heart::after {
+    left: 0;
+    transform: rotate(45deg);
+    transform-origin: 100% 100%;
 }
 
-.heart:after {
-    left: -50px;
+.container p {
+    display: block;
+    color: white;
+    margin-top: -1rem;
 }
