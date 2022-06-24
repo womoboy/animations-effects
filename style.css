@@ -1,0 +1,19 @@
+*,
+*:before,
+*:after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    padding: 1rem;
+}
+
+.anim-box {
+    width: 200px;
+    height: 200px;
+    background-color: gray;
+    margin-inline: auto;
+    background-image: ;
+}
